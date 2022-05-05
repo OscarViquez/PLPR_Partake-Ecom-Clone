@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* CSS RESETS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Adding Different Font to Website */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Removes the Underline and The Blue color from the link */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*  BANNER SECTION  ========================================= */
+
+/* "flex-flow: row nowrap;" Adding Flexbox in which it will automatically split the image and the text into 2 differnt sections in a ROW layout */
+/* "width: 100%;" Making the 'width' of the section always 100% */
+/* "align-items: center;" centers the text vertically */
+.banner {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  background-color: #FFF3BF
+}
+
+/* "text-align: right;" moves the image to the right, inside the banner-image-wrapper <div> */
+.banner-image-wrapper {
+  width: 50%;
+  height: auto;
+}
+
+/* "object-fit: cover;" This make sure the image stays fit, inside the banner-image-wrapper <div>*/
+.banner-image {
+  object-fit: cover;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+}
+
+.banner-text-wrapper {
+  width: 50%;
+  padding-left: 5rem;
+
+  font-weight: 500;
+  font-size: 22px;
+  color: #005099;
+}
+
+.banner-desc {
+  width: 65%;
+}
+
+.banner-button {
+  display: inline-block;
+  width: 153px;
+
+  padding: 15px 30px;
+  margin-top: 2rem;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+
+  text-align: center;
+  background-color: #005099;
+}
+
+.banner-button:hover {
+    background-color: #fff;
+    color: #005099;
+    transition: linear .2s;
+}
+
+@media (max-width: 1100px) {
+  .banner-desc {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .banner {
+    flex-flow: column nowrap;
+    padding: 0 0 2rem 0;
+  }
+  .banner-image-wrapper,
+  .banner-text-wrapper {
+    width: 100%;
+  }
+
+  .banner-image-wrapper {
+    text-align: center;
+  }
+
+  .banner-image {
+    min-width: 60%;
+    height: auto;
+  }
+
+  .banner-desc {
+    width: 100%;
+    margin-right: 2rem;
+  }
+
+  .banner-text-wrapper {
+    padding: 0 1rem;
+  }
+}
+
+/*  CARDS SECTION  ========================================= */
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.card {
+  width: 33.3%;
+  flex: 0 0 33.3%;
+  aspect-ratio: 4/3;
+  text-align: center;
+
+  padding-top: 2.5rem;
+}
+
+.card--pink {
+  background-color: #f7b9e1;
+}
+
+.card--blue {
+  background-color: #abdbe9;
+}
+
+.card--green {
+  background-color: #60cf94;
+}
+
+.card__title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #005099;
+
+  margin-bottom: 1rem;
+}
+
+.card__button {
+  display: inline-block;
+  margin-bottom: 2rem;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #005099;
+  border-bottom: #fff solid 3px;
+  transition: color linear .15s;
+
+}
+
+.card__button:hover {
+  color: #fff;
+  transition: linear .15s;
+}
+
+.card__image--one {
+  background: url('../image/box-1-blue.webp');
+}
+
+.card__image--two {
+  background: url('../image/box-2-pink.webp');
+}
+
+.card__image--three {
+  background: url('../image/box-3-orange.webp');
+}
+
+.card__image {
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image .2s linear;
+}
+
+.card__image--one:hover {
+  background: url('../image/box-1-hover-purp.webp');
+
+}
+
+.card__image--two:hover {
+  background: url('../image/box-2-hover-blue.webp');
+}
+
+.card__image--three:hover {
+  background: url('../image/box-3-hover-yellow.webp');
+}
+
+.card__image--one:hover, .card__image--two:hover, .card__image--three:hover {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: linear .15s;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+  
+  .card {
+    width: 100%;
+    flex: 0 0 100%;
+    aspect-ratio: 16/9;
+    text-align: center;
+  
+    padding-top: 2.5rem;
+  }
+  
+}
